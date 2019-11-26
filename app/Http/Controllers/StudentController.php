@@ -11,12 +11,13 @@ class StudentController extends Controller
 {
     public function getInfo($id){
       $std = std::getInfo($id);
-
-      if(count($std)==0){
+      $stdBranch = std::getList($std->stdBranch);
+        //dd($stdBranch);
+      if($std==null){
         return view('student');
       }
       else{
-        $data = array('std' => $std);
+        $data = array('std' => $std, 'stdBranch' => $stdBranch);
         //dd($data);
         return view('index1',$data);
       }

@@ -11,8 +11,15 @@ class Student extends Model
     public static function getInfo($id){
        return DB::table('student')
        ->where('id',$id)
-       ->get();
+       ->first();
     }
+
+    public static function getBranch($stdBranch){
+      return DB::table('student')
+      ->where('stdBranch',$stdBranch)
+      ->get();
+    }
+
 
     public static function getList($stdBranch){
       return DB::table('student')

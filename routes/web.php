@@ -23,14 +23,14 @@ Route::get('/student{id}','StudentController@getInfo');
 
 Route::post('addInfo','StudentController@addInfo');
 
-Route::get('getList{stdBranch}','StudentController@getList');
+//Route::get('getList{stdBranch}','StudentController@getList');
 
 Route::get('editData{id}','StudentController@editData');
 
 Route::post('addnewdata','StudentController@addnewdata');
 
-
 //----------------------------------------------------------------
+
 Route::get('/teacher{id}','TeacherController@getInfo');
 
 Route::post('addDataT','TeacherController@addDataT');
